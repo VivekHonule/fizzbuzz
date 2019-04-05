@@ -1,2 +1,0 @@
-# fizzbuzz
-Code Kata Exercide
