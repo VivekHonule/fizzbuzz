@@ -14,4 +14,15 @@ public class FizzBuzzTest {
 
         assertEquals(expected, result);
     }
+
+    @Test
+    public void testPrintFizzBuzzSeriesWhenNumberIsDivisibleByThreeAndFive() {
+        String ls = System.lineSeparator();
+        String expected = "Fizz" + ls + "13" + ls + "14" + ls + "FizzBuzz";
+        FizzBuzz game = new FizzBuzz(12, 15);
+
+        String result = game.printNumbers();
+
+        assertEquals(expected, result);
+    }
 }

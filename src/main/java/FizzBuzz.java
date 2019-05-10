@@ -22,12 +22,16 @@ public class FizzBuzz {
     }
 
     private String evaluateRules(int number) {
-        if (threeRule.isSatisfied(number)) {
-            return DivideByThreeRule.FIZZ;
+        StringBuilder sb = new StringBuilder();
+        if (threeRule.isSatisfied(number) && fiveRule.isSatisfied(number)) {
+            sb.append(DivideByThreeRule.FIZZ).append(DivideByFiveRule.BUZZ);
         } else if (fiveRule.isSatisfied(number)) {
-            return DivideByFiveRule.BUZZ;
+            sb.append(DivideByFiveRule.BUZZ);
+        } else if (threeRule.isSatisfied(number)) {
+            sb.append(DivideByThreeRule.FIZZ);
         } else {
-            return String.valueOf(number);
+            sb.append(number);
         }
+        return sb.toString();
     }
 }
