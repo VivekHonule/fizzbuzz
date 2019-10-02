@@ -14,4 +14,15 @@ public class FizzBuzzTest {
 
         assertEquals(expected, result);
     }
+
+    @Test
+    public void testPrintNumbersFromTenToFifteenWithFizzBuzz() {
+        String ls = System.lineSeparator();
+        String expected = "Buzz" + ls + "11" + ls + "Fizz" + ls + "13" + ls + "14" + ls + "FizzBuzz";
+        FizzBuzz game = new FizzBuzz(10, 15);
+
+        String result = game.printNumbers();
+
+        assertEquals(expected, result);
+    }
 }
